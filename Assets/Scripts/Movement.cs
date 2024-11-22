@@ -1,11 +1,11 @@
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Movement : MonoBehaviour
 {
 
     public float speed;
     public float range;
+    public float sOfset;
     void Start()
     {
         
@@ -14,19 +14,29 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (!(transform.position.x <= range && transform.position.x >= -range))
+        //ranges
+        if(transform.position.x >= range)
         {
-            transform.position += new Vector3(speed, 0, 0);
+            transform.position -= new Vector3(speed* sOfset, 0, 0);
         }
 
+        if (!(transform.position.x >= -range))
+        {
+            transform.position += new Vector3(speed* sOfset, 0, 0);
+        }
+
+
+
+
+        //contorls
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position += new Vector3(speed, 0, 0);
+            transform.position += new Vector3(speed*Time.deltaTime , 0, 0);
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += new Vector3(-speed, 0, 0);
+            transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
         }
 
 
