@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class Movement : MonoBehaviour
 {
@@ -13,22 +14,21 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x <= range && transform.position.x >= -range)
+        if (!(transform.position.x <= range && transform.position.x >= -range))
         {
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                transform.position += new Vector3(speed, 0, 0);
-            }
+            transform.position += new Vector3(speed, 0, 0);
+        }
 
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                transform.position += new Vector3(-speed, 0, 0);
-            }
-        }
-        else
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position -= new Vector3(0.01f, 0, 0);
+            transform.position += new Vector3(speed, 0, 0);
         }
-        
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += new Vector3(-speed, 0, 0);
+        }
+
+
     }
 }
