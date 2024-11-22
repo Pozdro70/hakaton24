@@ -11,12 +11,9 @@ public class AsteroidSpawner : MonoBehaviour
 
     IEnumerator spawnMeteroid()
     {
-        float randPos = 0;
-        randPos = Random.Range(0,8.64f*2);
-        Transform nextSpawnPos = new GameObject().transform;
-        nextSpawnPos.position = new Vector3(randPos, 0, 0);
+        Vector3 nextSpawnPos = new Vector3(Random.Range(-8.64f, 8.64f), 12, 0);
 
-        Instantiate(meteorPrefab, nextSpawnPos);
+        Instantiate(meteorPrefab, nextSpawnPos, Quaternion.identity);
 
         yield return new WaitForSeconds(0.4f);
 

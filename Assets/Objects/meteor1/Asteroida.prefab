@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroida
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2985117314e3d914eba08901805b9709, type: 3}
+      propertyPath: m_TagString
+      value: obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -75,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2985117314e3d914eba08901805b9709, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7647423819213480758}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2985117314e3d914eba08901805b9709, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1794768181583817874}
   m_SourcePrefab: {fileID: 100100000, guid: 2985117314e3d914eba08901805b9709, type: 3}
 --- !u!1 &762727819744209046 stripped
 GameObject:
@@ -93,3 +100,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad7c468366e487c45965971dfd87d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-1794768181583817874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762727819744209046}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.039188825, y: 0.034961313, z: 0.028297393}
+  m_Center: {x: -0.007591142, y: -0.0022914885, z: 0.00055363035}

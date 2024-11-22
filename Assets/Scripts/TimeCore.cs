@@ -15,7 +15,7 @@ public class TimeCore : MonoBehaviour
     {
         timeText.text = ATime.ToString();
         ATime++;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         StartCoroutine(updateTime());
     }
 

@@ -3,20 +3,15 @@ using UnityEngine;
 
 public class Asteroids : MonoBehaviour
 {
-    
-    void Start()
-    {
-        StartCoroutine(lifetime());
-    }
-
-    IEnumerator lifetime()
-    {
-        yield return new WaitForSeconds(2);
-        Destroy(gameObject);
-    }
 
     void Update()
     {
-        transform.position -= new Vector3(0, 0.01f, 0);
+        transform.position -= new Vector3(0, 6 * Time.deltaTime, 0);
+    
+    
+        if(transform.position.y < -12)
+        {
+            Destroy(gameObject);
+        }
     }
 }
