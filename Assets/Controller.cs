@@ -16,7 +16,7 @@ public class SceneLoader : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Button not assigned!");
+            Debug.LogError("Nie przypisano przycisku!");
         }
     }
 
