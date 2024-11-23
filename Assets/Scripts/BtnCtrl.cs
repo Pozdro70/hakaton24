@@ -7,4 +7,5 @@ public class BtnCtrl : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
 }

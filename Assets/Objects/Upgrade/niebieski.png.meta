@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      niebieski_0: -5115922261136052720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
