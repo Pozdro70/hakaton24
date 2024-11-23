@@ -3,15 +3,19 @@ using UnityEngine;
 
 public class Asteroids : MonoBehaviour
 {
+    public int speed = 6;
 
     void Update()
     {
-        transform.position -= new Vector3(0, 6 * Time.deltaTime, 0);
-    
-    
-        if(transform.position.y < -12)
+        if (!Movement.Instance.freezed)
         {
-            Destroy(gameObject);
+            transform.position -= new Vector3(0, speed * Time.deltaTime, 0);
+
+            if (transform.position.y < -12)
+            {
+                Destroy(gameObject);
+            }
         }
+        
     }
 }
