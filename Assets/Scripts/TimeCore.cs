@@ -18,7 +18,12 @@ public class TimeCore : MonoBehaviour
         timeText.text = ATime.ToString();
         ATime++;
         yield return new WaitForSeconds(1.4f);
-        StartCoroutine(updateTime());
+
+        if (!Movement.Instance.freezed)
+        {
+            StartCoroutine(updateTime());
+        }
+        
     }
 
     
