@@ -20,6 +20,7 @@ public class AsteroidContact : MonoBehaviour
         {
             PlayerCore.instance.hp -= 20;
             PlayerCore.instance.UpdatePlayerStats();
+            Destroy(other.gameObject);
         }
     }
 }
