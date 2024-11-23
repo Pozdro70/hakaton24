@@ -26,17 +26,20 @@ public class Movement : MonoBehaviour
         }
 
 
-
-
         //contorls
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.position += new Vector3(speed*Time.deltaTime , 0, 0);
+            transform.eulerAngles = new Vector3(0,45,-90);
         }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position += new Vector3(-speed * Time.deltaTime, 0, 0);
+            transform.eulerAngles = new Vector3(0, 135, -90);
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, 90, -90);
         }
 
 

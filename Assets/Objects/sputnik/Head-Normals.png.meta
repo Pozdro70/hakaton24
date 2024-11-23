@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 17347ffc2f1757446a3b688a5ba22e93
+guid: 0769b4a01dcfa4d41856280fd735d875
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1839377291145181718
-    second: Asteroid_0
+      213: -8926394844012558467
+    second: Head-Normals_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
-    sRGBTexture: 1
+    enableMipMap: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -55,9 +55,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 1
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asteroid_0
+      name: Head-Normals_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1024
-        height: 956
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae50f5169183976e0800000000000000
-      internalID: -1839377291145181718
+      spriteID: d77c0c5fe231f1480800000000000000
+      internalID: -8926394844012558467
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Asteroid_0: -1839377291145181718
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
