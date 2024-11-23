@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UpFlapsBlack-Rougchtness_0: -5858211797494498197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

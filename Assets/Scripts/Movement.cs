@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 90, -90);
             }
 
-            if (Input.GetKey(KeyCode.RightShift) && PlayerCore.instance.power>2)
+            if ((Input.GetKey(KeyCode.LeftShift)|| Input.GetKey( KeyCode.RightShift)) && PlayerCore.instance.power>2)
             {
                 PlayerCore.instance.power -= 0.1f;
                 PlayerCore.instance.UpdatePlayerStats();

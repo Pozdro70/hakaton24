@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DownFlapsMetal-Texture_0: -330116274882637083
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

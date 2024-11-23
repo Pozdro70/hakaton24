@@ -19,6 +19,8 @@ public class AsteroidSpawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(spawnMeteroid());
+        infinite = Settings.instance.endless;
+        hard = Settings.instance.hard;
     }
      int i = 0;
      int j = 0;
@@ -26,11 +28,11 @@ public class AsteroidSpawner : MonoBehaviour
     bool notf = true;
     public bool infinite;
     int endVal;
+    bool hard;
 
-    IEnumerator EndGame()
-    {
-        yield return new WaitForSeconds(1.4f);
-    }
+
+
+    
 
     IEnumerator spawnMeteroid()
     {
@@ -81,30 +83,45 @@ public class AsteroidSpawner : MonoBehaviour
 
         if (TimeCore.instance.ATime > 1957 && TimeCore.instance.ATime < 1963)
         {
+
             Instantiate(meteorPrefab, nextSpawnPosM, Quaternion.identity);
             Instantiate(sputnikPrefab, nextSpawnPosS, Quaternion.Euler(180, 18, 0));
 
         }
         else if (TimeCore.instance.ATime > 1963 && TimeCore.instance.ATime < 1969)
         {
-
+            if (hard)
+            {
+                Instantiate(sputnikPrefab, nextSpawnPosS, Quaternion.Euler(180, 18, 0));
+            }
             Instantiate(meteorPrefab, nextSpawnPosM, Quaternion.identity);
             Instantiate(soyuzPrefab, nextSpawnPosSy, Quaternion.Euler(180, -90, 0));
         }
         else if (TimeCore.instance.ATime > 1969 && TimeCore.instance.ATime < 1978)
         {
+            if (hard)
+            {
+                Instantiate(sputnikPrefab, nextSpawnPosS, Quaternion.Euler(180, 18, 0));
+                Instantiate(soyuzPrefab, nextSpawnPosSy, Quaternion.Euler(180, -90, 0));
+            }
             Instantiate(meteorPrefab, nextSpawnPosM, Quaternion.identity);
             Instantiate(moon, MoonPosNext, Quaternion.identity);
         }
         else if (TimeCore.instance.ATime > 1978 && TimeCore.instance.ATime < 2021)
         {
-
+            if (hard)
+            {
+                Instantiate(sputnikPrefab, nextSpawnPosS, Quaternion.Euler(180, 18, 0));
+                Instantiate(soyuzPrefab, nextSpawnPosSy, Quaternion.Euler(180, -90, 0));
+                Instantiate(ufo, ufoPos, Quaternion.identity);
+            }
             Instantiate(meteorPrefab, nextSpawnPosM, Quaternion.identity);
             Instantiate(soyuzPrefab, nextSpawnPosSy, Quaternion.Euler(180, -90, 0));
             TimeCore.instance.setTimeACC(1);
         }
         else if (TimeCore.instance.ATime > 2021 && TimeCore.instance.ATime < 2036)
         {
+
             Instantiate(meteorPrefab, nextSpawnPosM, Quaternion.identity);
             Instantiate(dragon2, dragon2PosNext, Quaternion.Euler(180, 0, 0));
             Instantiate(soyuzPrefab, nextSpawnPosSy, Quaternion.Euler(180, -90, 0));
@@ -112,6 +129,14 @@ public class AsteroidSpawner : MonoBehaviour
         }
         else if (TimeCore.instance.ATime > 2036 && TimeCore.instance.ATime < 2100)
         {
+            if (hard)
+            {
+                Instantiate(sputnikPrefab, nextSpawnPosS, Quaternion.Euler(180, 18, 0));
+                Instantiate(soyuzPrefab, nextSpawnPosSy, Quaternion.Euler(180, -90, 0));
+                Instantiate(ufo, ufoPos, Quaternion.identity);
+                Instantiate(moon, MoonPosNext, Quaternion.identity);
+
+            }
             Instantiate(meteorPrefab, nextSpawnPosM, Quaternion.identity);
             Instantiate(dragon2, dragon2PosNext, Quaternion.Euler(180, 0, 0));
             Instantiate(starship, starshipPosNext, Quaternion.Euler(180, 0, 0));
@@ -128,6 +153,15 @@ public class AsteroidSpawner : MonoBehaviour
             Instantiate(meteorPrefab, nextSpawnPosM, Quaternion.identity);
             Instantiate(ufo, ufoPos, Quaternion.identity);
             Instantiate(isp, isPOs, Quaternion.Euler(90, 211, 0));
+
+            if (hard)
+            {
+                Instantiate(sputnikPrefab, nextSpawnPosS, Quaternion.Euler(180, 18, 0));
+                Instantiate(soyuzPrefab, nextSpawnPosSy, Quaternion.Euler(180, -90, 0));
+                Instantiate(ufo, ufoPos, Quaternion.identity);
+                Instantiate(moon, MoonPosNext, Quaternion.identity);
+
+            }
         }
         else if(TimeCore.instance.ATime >= 2500 && !infinite)
         {
