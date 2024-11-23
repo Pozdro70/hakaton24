@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 1223267420}
   ATime: 1957
+  timeAcc: 0
 --- !u!4 &134838512
 Transform:
   m_ObjectHideFlags: 0
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a6d8386fcc7fc4ba4dea1c47129958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endAnim: {fileID: 7400000, guid: 696bdc7c618ccac45922b832db865311, type: 2}
 --- !u!65 &293933416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -389,6 +391,29 @@ MonoBehaviour:
   hpSlider: {fileID: 1972067859}
   powerSlider: {fileID: 286946494}
   eogScreen: {fileID: 373914743}
+  god: 0
+--- !u!95 &293933419
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293933410}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d2ff1147a243f9641841b11e50c03cce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &295156950
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +603,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 320378539}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1625379439}
+        m_TargetAssemblyTypeName: BtnCtrl, Assembly-CSharp
+        m_MethodName: mainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &320378539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,7 +671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &373914744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1355,6 +1392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9df8ebeaa571bad43996ed4bc4710039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  I_AGE: {fileID: -7183985814731312105, guid: ea1859f1cefeb4547a5af22dc4753f70, type: 3}
+  II_AGE: {fileID: -1404364182269454188, guid: 969277cdd04297648af688acfce2fcfe, type: 3}
+  III_AGE: {fileID: -8111889152495878255, guid: ba9ddb793d10dc6418dc18d612fcd31b, type: 3}
 --- !u!1 &957723835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2044,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 738e9c15e3181ef40b0fa4c530fcacd9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 293933417}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 738e9c15e3181ef40b0fa4c530fcacd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 293933419}
   m_SourcePrefab: {fileID: 100100000, guid: 738e9c15e3181ef40b0fa4c530fcacd9, type: 3}
 --- !u!1 &1625379438
 GameObject:
@@ -2630,6 +2673,12 @@ MonoBehaviour:
   upgradeTHP: {fileID: 7647136432224923794, guid: 882861911e57d904487dd003df91413a, type: 3}
   upgradeCS: {fileID: 8529986827184394688, guid: 8119c0fe42f557a49801b11c06ae08b6, type: 3}
   moon: {fileID: 3730756016989196602, guid: 4a90e5ce949249545a73117b56c4b105, type: 3}
+  dragon2: {fileID: 1575311925763535869, guid: a59290b8fb2ca1c4cb0099d73ef29cb1, type: 3}
+  starship: {fileID: 275698507819059449, guid: 0615513f129bfff4ca7d08c512b5de32, type: 3}
+  ufo: {fileID: 117433273195584442, guid: 43965f4f3ad3d904983b0833b62209c2, type: 3}
+  isp: {fileID: 1762791915889460720, guid: 76a66fe8fb499f248a2fd1f84a249dd1, type: 3}
+  bhole: {fileID: 8323430189584697690, guid: 544cc5a09d9e2b046943090d8b2959fe, type: 3}
+  infinite: 0
 --- !u!4 &2137335807
 Transform:
   m_ObjectHideFlags: 0

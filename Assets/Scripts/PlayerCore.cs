@@ -9,6 +9,7 @@ public class PlayerCore : MonoBehaviour
     public Slider powerSlider;
     public static PlayerCore instance;
     public GameObject eogScreen;
+    public bool god=false;
     void Start()
     {
         UpdatePlayerStats();
@@ -23,7 +24,7 @@ public class PlayerCore : MonoBehaviour
     {
         hpSlider.value = hp;
 
-        if(hp <= 0)
+        if(hp <= 0 && !god)
         {
             eogScreen.SetActive(true);
             Movement.Instance.freezed = true;
@@ -31,6 +32,8 @@ public class PlayerCore : MonoBehaviour
 
         powerSlider.value = power;
 
+        if(hp > hpSlider.maxValue) { hp = hpSlider.maxValue; }
+        if(power > powerSlider.maxValue) { power = powerSlider.maxValue; }
 
     }
 

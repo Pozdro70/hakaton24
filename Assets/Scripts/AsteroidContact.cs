@@ -1,8 +1,9 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AsteroidContact : MonoBehaviour
 {
-
+    public AnimationClip endAnim;
     void Start()
     {
 
@@ -26,13 +27,13 @@ public class AsteroidContact : MonoBehaviour
         {
             if (other.GetComponent<Upgrade>().upgradet == Upgrade.upgradeType.Hp)
             {
-                
+
                 PlayerCore.instance.hp += 10;
-                
+
             }
             if (other.GetComponent<Upgrade>().upgradet == Upgrade.upgradeType.HpTotal)
             {
-                
+
                 PlayerCore.instance.hpSlider.maxValue += 50;
             }
             if (other.GetComponent<Upgrade>().upgradet == Upgrade.upgradeType.clear)
@@ -45,6 +46,12 @@ public class AsteroidContact : MonoBehaviour
             }
             Destroy(other.gameObject);
             PlayerCore.instance.UpdatePlayerStats();
+        }
+        else if (other.CompareTag("ending"))
+        {
+            gameObject.GetComponent<Animator>().Play(endAnim.name);
+            
+
         }
 
     }

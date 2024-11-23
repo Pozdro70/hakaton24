@@ -6,6 +6,7 @@ TagManager:
   tags:
   - obstacle
   - upgrade
+  - ending
   layers:
   - Default
   - TransparentFX

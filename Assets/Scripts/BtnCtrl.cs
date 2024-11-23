@@ -8,4 +8,14 @@ public class BtnCtrl : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void quit()
+    {
+        Application.Quit();
+    }
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
